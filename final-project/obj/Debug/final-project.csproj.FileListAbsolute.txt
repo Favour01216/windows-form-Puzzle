@@ -1,0 +1,17 @@
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\bin\Debug\final-project.exe.config
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\bin\Debug\final-project.exe
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\bin\Debug\final-project.pdb
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\bin\Debug\Newtonsoft.Json.dll
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\bin\Debug\Newtonsoft.Json.xml
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final-project.csproj.AssemblyReference.cache
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final_project.MainForm.resources
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final_project.Panels.InstructionsPanel.resources
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final_project.Panels.MainMenuPanel.resources
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final-project.csproj.GenerateResource.cache
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final-project.csproj.CoreCompileInputs.cache
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final-pr.794C6D21.Up2Date
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final-project.exe
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final-project.pdb
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final_project.Panels.GameOverPanel.resources
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final_project.Panels.GamePanel.resources
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final_project.Panels.PicturePuzzlePanel.resources
