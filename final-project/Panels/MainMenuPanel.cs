@@ -1,4 +1,5 @@
-﻿using System;
+﻿using final_project.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,43 +11,50 @@ using System.Windows.Forms;
 
 namespace final_project.Panels
 {
-    public partial class MainMenuPanel : UserControl
+    public partial class MainMenuPanel : Form
     {
-        public event EventHandler StartGameClicked;
-        public event EventHandler InstructionsClicked;
-        public event EventHandler ExitClicked;
-
+        private GameManager gameManager;
         public MainMenuPanel()
         {
             InitializeComponent();
-            HookEvents();
-            // Subscribe to Resize event after InitializeComponent
-            this.Resize += (s, e) => OnResizePanel();
+            InitializeGameManager();
         }
 
-        private void HookEvents()
+        private void InitializeGameManager()
         {
-            btnStartGame.Click += (s, e) => StartGameClicked?.Invoke(this, EventArgs.Empty);
-            btnInstructions.Click += (s, e) => InstructionsClicked?.Invoke(this, EventArgs.Empty);
-            btnExit.Click += (s, e) => ExitClicked?.Invoke(this, EventArgs.Empty);
-
-            btnStartGame.MouseEnter += (s, e) => btnStartGame.BackColor = System.Drawing.Color.LightCyan;
-            btnStartGame.MouseLeave += (s, e) => btnStartGame.BackColor = System.Drawing.Color.LightBlue;
-
-            btnInstructions.MouseEnter += (s, e) => btnInstructions.BackColor = System.Drawing.Color.PaleGreen;
-            btnInstructions.MouseLeave += (s, e) => btnInstructions.BackColor = System.Drawing.Color.LightGreen;
-
-            btnExit.MouseEnter += (s, e) => btnExit.BackColor = System.Drawing.Color.IndianRed;
-            btnExit.MouseLeave += (s, e) => btnExit.BackColor = System.Drawing.Color.LightCoral;
+            // Initialize the GameManager with a default player name.
+            gameManager = new GameManager("Player1");
         }
 
-        private void OnResizePanel()
+
+        // Method triggered when "Start Game" button is clicked.  
+        private void btnStartGame_Click(object sender, EventArgs e)
         {
-            // Center controls dynamically at runtime
-            lblTitle.Width = this.Width;
-            btnStartGame.Left = (this.Width - btnStartGame.Width) / 2;
-            btnInstructions.Left = (this.Width - btnInstructions.Width) / 2;
-            btnExit.Left = (this.Width - btnExit.Width) / 2;
+            GamePanel gamePanel = new GamePanel(gameManager);
+            this.Hide();
+            gamePanel.Show();
+
+        }
+
+        // Method triggered when "Instructions" button is clicked.  
+        private void btnInstructions_Click(object sender, EventArgs e)
+        {
+            InstructionsPanel instructionsPanel = new InstructionsPanel();
+            this.Hide();
+            instructionsPanel.Show();
+
+        }
+        // Method triggered when "Exit" button is clicked.  
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            // Confirm before exiting the application.  
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
-}
+}  
+

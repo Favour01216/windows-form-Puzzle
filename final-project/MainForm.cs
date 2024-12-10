@@ -3,91 +3,65 @@ using final_project.Utilities;
 using System;
 using System.Windows.Forms;
 
-
 namespace final_project
 {
     public partial class MainForm : Form
     {
-        // Panel Instances
-        private MainMenuPanel mainMenuPanel;
-        private InstructionsPanel instructionsPanel;
-        private GamePanel gamePanel;
-        private PicturePuzzlePanel picturePuzzlePanel;
-        private GameOverPanel gameOverPanel;
-
         public MainForm()
         {
             InitializeComponent();
-            InitializePanels();
-            ShowMainMenu();
+            InitializeMainForm();
         }
 
-        private void InitializePanels()
+        // Method to initialize and configure the MainForm settings.  
+        private void InitializeMainForm()
         {
-            mainMenuPanel = new MainMenuPanel();
-            instructionsPanel = new InstructionsPanel();
-            gamePanel = new GamePanel();
-            picturePuzzlePanel = new PicturePuzzlePanel();
-            gameOverPanel = new GameOverPanel();
+            // Set the form title and size.  
+            this.Text = "Time Traveler's Puzzle";
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Size = new System.Drawing.Size(800, 600);
 
-            mainMenuPanel.Dock = DockStyle.Fill;
-            instructionsPanel.Dock = DockStyle.Fill;
-            gamePanel.Dock = DockStyle.Fill;
-            picturePuzzlePanel.Dock = DockStyle.Fill;
-            gameOverPanel.Dock = DockStyle.Fill;
-
-            this.Controls.Add(mainMenuPanel);
-            this.Controls.Add(instructionsPanel);
-            this.Controls.Add(gamePanel);
-            this.Controls.Add(picturePuzzlePanel);
-            this.Controls.Add(gameOverPanel);
-
-            // Subscribe to panel events here if needed, e.g.:
-            // mainMenuPanel.StartGameClicked += (s, e) => ShowGamePanel();
+            // Load the Main Menu Panel as the initial screen.  
+            LoadMainMenu();
         }
 
-        private void ShowMainMenu()
+        // Method to load the Main Menu Panel.  
+        private void LoadMainMenu()
         {
-            HideAllPanels();
-            mainMenuPanel.Visible = true;
-            mainMenuPanel.BringToFront();
+            try
+            {
+                MainMenuPanel mainMenu = new MainMenuPanel();
+                mainMenu.TopLevel = false; // Allows the panel to be embedded in the MainForm.  
+                mainMenu.FormBorderStyle = FormBorderStyle.None;
+                mainMenu.Dock = DockStyle.Fill;
+
+                this.Controls.Clear(); // Clear any existing controls.  
+                this.Controls.Add(mainMenu);
+                mainMenu.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading Main Menu: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void ShowInstructions()
+        // Optional: Method to load other panels dynamically, if needed.  
+        public void LoadPanel(Form panel)
         {
-            HideAllPanels();
-            instructionsPanel.Visible = true;
-            instructionsPanel.BringToFront();
-        }
+            try
+            {
+                panel.TopLevel = false;
+                panel.FormBorderStyle = FormBorderStyle.None;
+                panel.Dock = DockStyle.Fill;
 
-        private void ShowGamePanel()
-        {
-            HideAllPanels();
-            gamePanel.Visible = true;
-            gamePanel.BringToFront();
-        }
-
-        private void ShowPicturePuzzle()
-        {
-            HideAllPanels();
-            picturePuzzlePanel.Visible = true;
-            picturePuzzlePanel.BringToFront();
-        }
-
-        private void ShowGameOver()
-        {
-            HideAllPanels();
-            gameOverPanel.Visible = true;
-            gameOverPanel.BringToFront();
-        }
-
-        private void HideAllPanels()
-        {
-            mainMenuPanel.Visible = false;
-            instructionsPanel.Visible = false;
-            gamePanel.Visible = false;
-            picturePuzzlePanel.Visible = false;
-            gameOverPanel.Visible = false;
+                this.Controls.Clear();
+                this.Controls.Add(panel);
+                panel.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading panel: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

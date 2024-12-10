@@ -1,4 +1,5 @@
-﻿using System;
+﻿using final_project.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -6,64 +7,37 @@ using System.Windows.Forms;
 
 namespace final_project.Panels
 {
-    public partial class PicturePuzzlePanel : UserControl
+    public partial class PicturePuzzlePanel : Form
     {
-        public event EventHandler BackToGameClicked;
-        public event EventHandler ShuffleClicked;
-        public event EventHandler SavePuzzleClicked;
+        private GameManager gameManager;
 
-        public PicturePuzzlePanel()
+        public PicturePuzzlePanel(GameManager manager)
         {
             InitializeComponent();
-            HookEvents();
-            this.Resize += (s, e) => OnResizePanel();
+            gameManager = manager ?? throw new ArgumentNullException(nameof(manager), "GameManager cannot be null.");
         }
 
-        private void HookEvents()
+        // Method triggered when "Shuffle" button is clicked.  
+        private void BtnShuffle_Click(object sender, EventArgs e)
         {
-            btnBackToGame.Click += (s, e) => BackToGameClicked?.Invoke(this, EventArgs.Empty);
-            btnShuffle.Click += (s, e) => ShuffleClicked?.Invoke(this, EventArgs.Empty);
-            btnSavePuzzle.Click += (s, e) => SavePuzzleClicked?.Invoke(this, EventArgs.Empty);
+            // Implement logic to shuffle puzzle tiles.  
+            MessageBox.Show("The tiles have been shuffled.", "Shuffle", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public void ShuffleTiles()
+        // Method triggered when "Save Puzzle" button is clicked.  
+        private void BtnSavePuzzle_Click(object sender, EventArgs e)
         {
-            // Implement shuffle logic if needed
+            gameManager.SaveGame();
+            // Implement logic to save the current puzzle state.  
+            MessageBox.Show("The current puzzle state has been saved.", "Save Puzzle", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public void UpdatePuzzleTimer(int secondsLeft)
+        // Method triggered when "Back to Game" button is clicked.  
+        private void BtnBackToGame_Click(object sender, EventArgs e)
         {
-            lblPuzzleTimer.Text = $"Timer: {secondsLeft}s";
-        }
-
-        public void SavePuzzleState()
-        {
-            // Implement save puzzle logic if needed
-        }
-
-        public void LoadPuzzleState()
-        {
-            // Implement load puzzle logic if needed
-        }
-
-        public bool IsPuzzleComplete()
-        {
-            // Check puzzle completion if needed
-            return false;
-        }
-
-        private void OnResizePanel()
-        {
-            // Dynamically adjust the size and positions of controls at runtime
-            // Adjust tableLayoutPanelPuzzle based on current panel size
-            tableLayoutPanelPuzzle.Width = this.Width - 260;
-            tableLayoutPanelPuzzle.Height = this.Height - 160;
-
-            // Position Shuffle, Timer, and SavePuzzle buttons at bottom
-            btnShuffle.Top = this.Height - 60;
-            lblPuzzleTimer.Top = this.Height - 55;
-            btnSavePuzzle.Top = this.Height - 60;
-            btnSavePuzzle.Left = this.Width - 120;
+            this.Hide();
+            GamePanel gamePanel = new GamePanel(gameManager);
+            gamePanel.Show();
         }
     }
 }

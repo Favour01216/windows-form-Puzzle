@@ -27,60 +27,64 @@
             // 
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 28F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(50, 50, 50);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.lblTitle.Location = new System.Drawing.Point(0, 80);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(800, 60); // Fixed width here, adjust as needed
+            this.lblTitle.Size = new System.Drawing.Size(800, 60);
+            this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Time Traveler\'s Puzzle";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTitle.AutoSize = false;
             // 
             // btnStartGame
             // 
-            this.btnStartGame.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnStartGame.BackColor = System.Drawing.Color.LightBlue;
             this.btnStartGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            // Set a fixed initial location (no dynamic code)
+            this.btnStartGame.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnStartGame.Location = new System.Drawing.Point(300, 200);
+            this.btnStartGame.Name = "btnStartGame";
             this.btnStartGame.Size = new System.Drawing.Size(200, 50);
+            this.btnStartGame.TabIndex = 1;
             this.btnStartGame.Text = "Start Game";
             this.btnStartGame.UseVisualStyleBackColor = false;
-            this.btnStartGame.Name = "btnStartGame";
+            this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
             // 
             // btnInstructions
             // 
-            this.btnInstructions.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnInstructions.BackColor = System.Drawing.Color.LightGreen;
             this.btnInstructions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            // Fixed initial location
+            this.btnInstructions.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnInstructions.Location = new System.Drawing.Point(300, 270);
+            this.btnInstructions.Name = "btnInstructions";
             this.btnInstructions.Size = new System.Drawing.Size(200, 50);
+            this.btnInstructions.TabIndex = 2;
             this.btnInstructions.Text = "Instructions";
             this.btnInstructions.UseVisualStyleBackColor = false;
-            this.btnInstructions.Name = "btnInstructions";
+            this.btnInstructions.Click += new System.EventHandler(this.btnInstructions_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnExit.BackColor = System.Drawing.Color.LightCoral;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            // Fixed initial location
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnExit.Location = new System.Drawing.Point(300, 340);
+            this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(200, 50);
+            this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Name = "btnExit";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // MainMenuPanel
             // 
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(782, 553);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.btnInstructions);
             this.Controls.Add(this.btnExit);
             this.Name = "MainMenuPanel";
-            this.Size = new System.Drawing.Size(800, 600);
             this.ResumeLayout(false);
+
         }
     }
 }

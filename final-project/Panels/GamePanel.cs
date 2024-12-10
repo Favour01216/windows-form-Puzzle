@@ -1,73 +1,143 @@
 ﻿using System;
-using final_project.Utilities;
 using System.Windows.Forms;
+using final_project.Utilities;
 
 namespace final_project.Panels
 {
-    public partial class GamePanel : UserControl
+    public partial class GamePanel : Form
     {
-        // Public events for various actions
-        public event EventHandler SubmitAnswerClicked;
-        public event EventHandler NextClicked;
-        public event EventHandler SaveGameClicked;
-        public event EventHandler LoadGameClicked;
-        public event EventHandler PicturePuzzleClicked;
+        private GameManager gameManager;
+        private int timeRemaining;
 
-        public GamePanel()
+        public GamePanel(GameManager manager)
         {
             InitializeComponent();
-            HookEvents();
+            gameManager = manager ?? throw new ArgumentNullException(nameof(manager), "GameManager cannot be null.");
+            StartNewPuzzle();
         }
 
-        private void HookEvents()
+        private void StartNewPuzzle()
         {
-            btnSubmitAnswer.Click += (s, e) => SubmitAnswerClicked?.Invoke(this, EventArgs.Empty);
-            btnNext.Click += (s, e) => NextClicked?.Invoke(this, EventArgs.Empty);
-            btnSaveGame.Click += (s, e) => SaveGameClicked?.Invoke(this, EventArgs.Empty);
-            btnLoadGame.Click += (s, e) => LoadGameClicked?.Invoke(this, EventArgs.Empty);
-            btnPicturePuzzle.Click += (s, e) => PicturePuzzleClicked?.Invoke(this, EventArgs.Empty);
+            if (gameManager.IsGameOver())
+            {
+                ShowGameOverPanel();
+                return;
+            }
+
+            var currentPeriod = gameManager.GetCurrentTimePeriod();
+            var currentPuzzle = currentPeriod?.Puzzles.Find(p => !p.IsSolved);
+
+            if (currentPuzzle == null)
+            {
+                gameManager.AdvanceToNextPeriod();
+                StartNewPuzzle();
+                return;
+            }
+
+            lblTimePeriod.Text = currentPeriod.Name;
+            lblDescription.Text = currentPeriod.Description;
+            lblQuestion.Text = currentPuzzle.Question;
+
+            ResetTimer();
         }
 
-        // Methods to update UI elements
-        public void UpdateScore(int score)
+        private void ResetTimer()
         {
-            lblScore.Text = $"Score: {score}";
+            timeRemaining = 60;
+            lblTimer.Text = $"Time Left: {timeRemaining}s";
+
+            if (!timer.Enabled)
+            {
+                timer.Interval = 1000;
+                timer.Tick += Timer_Tick;
+                timer.Start();
+            }
         }
 
-        public void UpdateTimer(string timeLeft)
+        private void Timer_Tick(object sender, EventArgs e)
         {
-            lblTimer.Text = $"Time Left: {timeLeft}";
+            if (timeRemaining > 0)
+            {
+                timeRemaining--;
+                lblTimer.Text = $"Time Left: {timeRemaining}s";
+            }
+            else
+            {
+                timer.Stop();
+                MessageBox.Show("Time's up! Moving to the next puzzle.", "Time Up", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                StartNewPuzzle();
+            }
         }
 
-        public void UpdateTimePeriod(string name, string description)
+        private void btnSubmitAnswer_Click(object sender, EventArgs e)
         {
-            lblTimePeriod.Text = name;
-            lblDescription.Text = description;
+            var currentPeriod = gameManager.GetCurrentTimePeriod();
+            var currentPuzzle = currentPeriod?.Puzzles.Find(p => !p.IsSolved);
+
+            if (currentPuzzle == null)
+            {
+                MessageBox.Show("No active puzzle to submit an answer for.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string userAnswer = txtAnswer.Text.Trim();
+
+            if (currentPuzzle.CheckAnswer(userAnswer))
+            {
+                gameManager.Player.AddScore(10);
+                lblScore.Text = $"Score: {gameManager.Player.Score}";
+                timer.Stop();
+
+                MessageBox.Show("Correct answer! Moving to the next puzzle.", "Correct", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                StartNewPuzzle();
+            }
+            else
+            {
+                MessageBox.Show("Incorrect answer. Please try again.", "Incorrect", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            txtAnswer.Clear();
         }
 
-        public void UpdateQuestion(string question)
+        private void btnNext_Click(object sender, EventArgs e)
         {
-            lblQuestion.Text = question;
+            StartNewPuzzle();
         }
 
-        public string GetAnswer()
+        private void btnBackToMainMenu_Click(object sender, EventArgs e)
         {
-            return txtAnswer.Text;
+            timer.Stop();
+            ReturnToMainMenu();
         }
 
-        public void ShowFeedback(string feedback)
+        private void ShowGameOverPanel()
         {
-            lblFeedback.Text = feedback;
+            this.Hide();
+            GameOverPanel gameOverPanel = new GameOverPanel(gameManager);
+            gameOverPanel.Show();
         }
 
-        public void ClearAnswer()
+        private void ReturnToMainMenu()
         {
-            txtAnswer.Text = "";
+            this.Hide();
+            var mainMenu = new MainMenuPanel();
+            mainMenu.Show();
         }
 
-        public void EnableNextButton(bool enable)
+        private void btnLoadGame_Click(object sender, EventArgs e)
         {
-            btnNext.Enabled = enable;
+            gameManager.LoadGame();
+            lblScore.Text = $"Score: {gameManager.Player.Score}";
+            MessageBox.Show("Game loaded! Resetting progress.", "Game Loaded", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            StartNewPuzzle();
+        }
+
+        private void btnSaveGame_Click(object sender, EventArgs e)
+        {
+            gameManager.SaveGame();
+            timer.Stop();
+            MessageBox.Show("Game saved! Showing Game Over panel.", "Game Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ShowGameOverPanel();
         }
     }
 }

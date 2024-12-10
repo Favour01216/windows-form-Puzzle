@@ -60,31 +60,31 @@
     <Compile Include="Models\SaveData.cs" />
     <Compile Include="Models\TimePeriod.cs" />
     <Compile Include="Panels\GameOverPanel.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Panels\GameOverPanel.Designer.cs">
       <DependentUpon>GameOverPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Panels\GamePanel.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Panels\GamePanel.Designer.cs">
       <DependentUpon>GamePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Panels\InstructionsPanel.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Panels\InstructionsPanel.Designer.cs">
       <DependentUpon>InstructionsPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Panels\MainMenuPanel.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Panels\MainMenuPanel.Designer.cs">
       <DependentUpon>MainMenuPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Panels\PicturePuzzlePanel.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Panels\PicturePuzzlePanel.Designer.cs">
       <DependentUpon>PicturePuzzlePanel.cs</DependentUpon>

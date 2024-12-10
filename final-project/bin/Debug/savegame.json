@@ -1,0 +1,67 @@
+{
+  "PlayerName": "Player1",
+  "PlayerScore": 0,
+  "CurrentPeriodIndex": 0,
+  "TimePeriods": [
+    {
+      "Name": "Renaissance",
+      "Description": "A period of great cultural change and achievement.",
+      "Puzzles": [
+        {
+          "Question": "Which city is considered the cradle of the Renaissance?",
+          "Answer": "Florence",
+          "IsSolved": false,
+          "Narrative": "Florence thrived with artists and thinkers.",
+          "HasAnomaly": false,
+          "AnomalyDescription": ""
+        },
+        {
+          "Question": "Who painted the Mona Lisa?",
+          "Answer": "Leonardo da Vinci",
+          "IsSolved": false,
+          "Narrative": "As you solve this puzzle, you notice the vibrant art of the era.",
+          "HasAnomaly": false,
+          "AnomalyDescription": ""
+        },
+        {
+          "Question": "What invention greatly impacted navigation during the Renaissance?",
+          "Answer": "Compass",
+          "IsSolved": false,
+          "Narrative": "The compass revolutionized exploration and trade.",
+          "HasAnomaly": false,
+          "AnomalyDescription": ""
+        }
+      ]
+    },
+    {
+      "Name": "Medieval Era",
+      "Description": "A period characterized by feudalism and knights.",
+      "Puzzles": [
+        {
+          "Question": "What was the primary weapon of knights?",
+          "Answer": "Sword",
+          "IsSolved": false,
+          "Narrative": "The sword was a symbol of knighthood and valor.",
+          "HasAnomaly": false,
+          "AnomalyDescription": ""
+        },
+        {
+          "Question": "What document limited the king's power in England?",
+          "Answer": "Magna Carta",
+          "IsSolved": false,
+          "Narrative": "The Magna Carta was a cornerstone of modern democracy.",
+          "HasAnomaly": false,
+          "AnomalyDescription": ""
+        },
+        {
+          "Question": "What structure was central to medieval towns?",
+          "Answer": "Castle",
+          "IsSolved": false,
+          "Narrative": "Castles provided defense and were centers of power.",
+          "HasAnomaly": false,
+          "AnomalyDescription": ""
+        }
+      ]
+    }
+  ]
+}

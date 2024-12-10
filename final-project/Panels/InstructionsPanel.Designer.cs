@@ -32,7 +32,7 @@ namespace final_project.Panels
             this.lblInstructionsTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblInstructionsTitle.Location = new System.Drawing.Point(0, 0);
             this.lblInstructionsTitle.Name = "lblInstructionsTitle";
-            this.lblInstructionsTitle.Size = new System.Drawing.Size(800, 60);
+            this.lblInstructionsTitle.Size = new System.Drawing.Size(782, 60);
             this.lblInstructionsTitle.TabIndex = 0;
             this.lblInstructionsTitle.Text = "How to Play";
             this.lblInstructionsTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -62,15 +62,16 @@ namespace final_project.Panels
             this.btnBackFromInstructions.TabIndex = 2;
             this.btnBackFromInstructions.Text = "Back";
             this.btnBackFromInstructions.UseVisualStyleBackColor = false;
+            this.btnBackFromInstructions.Click += new System.EventHandler(this.btnBackFromInstructions_Click);
             // 
             // InstructionsPanel
             // 
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(782, 553);
             this.Controls.Add(this.lblInstructionsTitle);
             this.Controls.Add(this.rtbInstructions);
             this.Controls.Add(this.btnBackFromInstructions);
             this.Name = "InstructionsPanel";
-            this.Size = new System.Drawing.Size(800, 600);
             this.ResumeLayout(false);
             this.PerformLayout();
 

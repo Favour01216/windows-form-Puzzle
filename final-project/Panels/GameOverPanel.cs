@@ -1,56 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using final_project.Utilities;
+using System;
 using System.Windows.Forms;
 
 namespace final_project.Panels
 {
-    public partial class GameOverPanel : UserControl
+    public partial class GameOverPanel : Form
     {
-        public event EventHandler PlayAgainClicked;
-        public event EventHandler MainMenuClicked;
+        private GameManager gameManager;
 
-        public GameOverPanel()
+        public GameOverPanel(GameManager manager)
         {
             InitializeComponent();
-            HookEvents();
+            gameManager = manager ?? throw new ArgumentNullException(nameof(manager), "GameManager cannot be null.");
+
+            // Display the final score.  
+            lblFinalScore.Text = $"Your Final Score: {gameManager.Player.Score}";
         }
 
-        private void HookEvents()
+        // Method triggered when "Play Again" button is clicked.  
+        private void btnPlayAgain_Click(object sender, EventArgs e)
         {
-            btnPlayAgain.Click += (s, e) => PlayAgainClicked?.Invoke(this, EventArgs.Empty);
-            btnMainMenu.Click += (s, e) => MainMenuClicked?.Invoke(this, EventArgs.Empty);
+            try
+            {
+                // Restart the game with the same player name.  
+                gameManager = new GameManager(gameManager.Player.Name);
+
+                // Hide the current panel and start a new game.  
+                this.Hide();
+                GamePanel gamePanel = new GamePanel(gameManager);
+                gamePanel.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error restarting the game: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        public void SetFinalScore(string playerName, int score)
+        // Method triggered when "Return to Main Menu" button is clicked.  
+        private void btnMainMenu_Click(object sender, EventArgs e)
         {
-            lblCongratulations.Text = $"Congratulations, {playerName}!";
-            lblFinalScore.Text = $"Your Final Score: {score}";
-            // Trigger a manual resize to recenter elements after updating text
-            OnResizePanel();
-        }
+            try
+            {
+                // Hide the current Game Over Panel and return to Main Menu.  
+                this.Hide();
 
-        private void OnResizePanel()
-        {
-            // Center lblCongratulations horizontally
-            lblCongratulations.Left = (this.Width - lblCongratulations.Width) / 2;
-            // Position lblFinalScore below lblCongratulations, also centered
-            lblFinalScore.Left = (this.Width - lblFinalScore.Width) / 2;
-            lblFinalScore.Top = lblCongratulations.Bottom + 20;
-
-            // Position buttons horizontally centered, with spacing
-            btnPlayAgain.Top = lblFinalScore.Bottom + 100;
-            btnMainMenu.Top = btnPlayAgain.Top;
-
-            int totalButtonsWidth = btnPlayAgain.Width + 30 + btnMainMenu.Width;
-            int startX = (this.Width - totalButtonsWidth) / 2;
-            btnPlayAgain.Left = startX;
-            btnMainMenu.Left = btnPlayAgain.Right + 30;
+                MainMenuPanel mainMenuPanel = new MainMenuPanel();
+                mainMenuPanel.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error returning to Main Menu: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

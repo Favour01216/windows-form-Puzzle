@@ -27,6 +27,7 @@ namespace final_project.Panels
 
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblScore = new System.Windows.Forms.Label();
             this.lblTimer = new System.Windows.Forms.Label();
             this.lblTimePeriod = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@ namespace final_project.Panels
             this.btnSaveGame = new System.Windows.Forms.Button();
             this.btnLoadGame = new System.Windows.Forms.Button();
             this.btnPicturePuzzle = new System.Windows.Forms.Button();
+            this.BtnBackToMainMenu = new System.Windows.Forms.Button();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lblScore
@@ -117,11 +120,11 @@ namespace final_project.Panels
             this.btnSubmitAnswer.TabIndex = 6;
             this.btnSubmitAnswer.Text = "Submit";
             this.btnSubmitAnswer.UseVisualStyleBackColor = false;
+            this.btnSubmitAnswer.Click += new System.EventHandler(this.btnSubmitAnswer_Click);
             // 
             // btnNext
             // 
             this.btnNext.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnNext.Enabled = false;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnNext.Location = new System.Drawing.Point(20, 280);
@@ -130,6 +133,7 @@ namespace final_project.Panels
             this.btnNext.TabIndex = 7;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // lblFeedback
             // 
@@ -148,10 +152,11 @@ namespace final_project.Panels
             this.btnSaveGame.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnSaveGame.Location = new System.Drawing.Point(20, 500);
             this.btnSaveGame.Name = "btnSaveGame";
-            this.btnSaveGame.Size = new System.Drawing.Size(100, 30);
+            this.btnSaveGame.Size = new System.Drawing.Size(100, 57);
             this.btnSaveGame.TabIndex = 9;
             this.btnSaveGame.Text = "Save Game";
             this.btnSaveGame.UseVisualStyleBackColor = false;
+            this.btnSaveGame.Click += new System.EventHandler(this.btnSaveGame_Click);
             // 
             // btnLoadGame
             // 
@@ -160,10 +165,11 @@ namespace final_project.Panels
             this.btnLoadGame.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnLoadGame.Location = new System.Drawing.Point(130, 500);
             this.btnLoadGame.Name = "btnLoadGame";
-            this.btnLoadGame.Size = new System.Drawing.Size(100, 30);
+            this.btnLoadGame.Size = new System.Drawing.Size(100, 57);
             this.btnLoadGame.TabIndex = 10;
             this.btnLoadGame.Text = "Load Game";
             this.btnLoadGame.UseVisualStyleBackColor = false;
+            this.btnLoadGame.Click += new System.EventHandler(this.btnLoadGame_Click);
             // 
             // btnPicturePuzzle
             // 
@@ -172,14 +178,33 @@ namespace final_project.Panels
             this.btnPicturePuzzle.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnPicturePuzzle.Location = new System.Drawing.Point(650, 500);
             this.btnPicturePuzzle.Name = "btnPicturePuzzle";
-            this.btnPicturePuzzle.Size = new System.Drawing.Size(110, 30);
+            this.btnPicturePuzzle.Size = new System.Drawing.Size(129, 57);
             this.btnPicturePuzzle.TabIndex = 11;
             this.btnPicturePuzzle.Text = "Picture Puzzle";
             this.btnPicturePuzzle.UseVisualStyleBackColor = false;
             // 
+            // BtnBackToMainMenu
+            // 
+            this.BtnBackToMainMenu.BackColor = System.Drawing.Color.LightYellow;
+            this.BtnBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBackToMainMenu.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.BtnBackToMainMenu.Location = new System.Drawing.Point(236, 500);
+            this.BtnBackToMainMenu.Name = "BtnBackToMainMenu";
+            this.BtnBackToMainMenu.Size = new System.Drawing.Size(100, 57);
+            this.BtnBackToMainMenu.TabIndex = 10;
+            this.BtnBackToMainMenu.Text = "Back";
+            this.BtnBackToMainMenu.UseVisualStyleBackColor = false;
+            this.BtnBackToMainMenu.Click += new System.EventHandler(this.btnBackToMainMenu_Click);
+            // 
+            // timer
+            // 
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
             // GamePanel
             // 
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(830, 595);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.lblTimePeriod);
@@ -190,13 +215,16 @@ namespace final_project.Panels
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lblFeedback);
             this.Controls.Add(this.btnSaveGame);
+            this.Controls.Add(this.BtnBackToMainMenu);
             this.Controls.Add(this.btnLoadGame);
             this.Controls.Add(this.btnPicturePuzzle);
             this.Name = "GamePanel";
-            this.Size = new System.Drawing.Size(800, 600);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
+        private Button BtnBackToMainMenu;
+        private Timer timer;
     }
 }

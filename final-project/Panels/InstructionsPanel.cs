@@ -3,22 +3,31 @@ using System.Windows.Forms;
 
 namespace final_project.Panels
 {
-    public partial class InstructionsPanel : UserControl
+    public partial class InstructionsPanel : Form
     {
-        // Public event to notify when the user wants to go back
-        public event EventHandler BackClicked;
-
         public InstructionsPanel()
         {
             InitializeComponent();
-            HookEvents();
         }
 
-        private void HookEvents()
+        // Method triggered when "Back" button is clicked.  
+        private void btnBackFromInstructions_Click(object sender, EventArgs e)
         {
-            btnBackFromInstructions.Click += (s, e) => BackClicked?.Invoke(this, EventArgs.Empty);
+            // Hide the current Instructions Panel.  
+            this.Hide();
 
-            // You could dynamically update the instructions text here if needed.
+            // Return to the Main Menu Panel.  
+            try
+            {
+                MainMenuPanel mainMenuPanel = new MainMenuPanel();
+                mainMenuPanel.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error returning to Main Menu: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+       
     }
 }
