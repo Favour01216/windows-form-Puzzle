@@ -28,6 +28,6 @@ namespace final_project.Panels
             }
         }
 
-       
+
     }
 }

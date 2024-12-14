@@ -48,7 +48,7 @@ namespace final_project.Panels
 
             if (!timer.Enabled)
             {
-                timer.Interval = 1000;
+               
                 timer.Tick += Timer_Tick;
                 timer.Start();
             }
@@ -138,6 +138,15 @@ namespace final_project.Panels
             timer.Stop();
             MessageBox.Show("Game saved! Showing Game Over panel.", "Game Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ShowGameOverPanel();
+        }
+
+        private void btnPicturePuzzle_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+            this.Hide();
+            PicturePuzzlePanel picturePuzzlePanel = new PicturePuzzlePanel(gameManager);
+            picturePuzzlePanel.Show();
+
         }
     }
 }

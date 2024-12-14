@@ -10,7 +10,6 @@ namespace final_project.Panels
         private System.Windows.Forms.Button btnBackToGame;
         private System.Windows.Forms.PictureBox picReference;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelPuzzle;
-        private System.Windows.Forms.Button btnShuffle;
         private System.Windows.Forms.Label lblPuzzleTimer;
         private System.Windows.Forms.Button btnSavePuzzle;
 
@@ -23,12 +22,13 @@ namespace final_project.Panels
 
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnBackToGame = new System.Windows.Forms.Button();
             this.picReference = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelPuzzle = new System.Windows.Forms.TableLayoutPanel();
-            this.btnShuffle = new System.Windows.Forms.Button();
             this.lblPuzzleTimer = new System.Windows.Forms.Label();
             this.btnSavePuzzle = new System.Windows.Forms.Button();
+            this.puzzleTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picReference)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,10 +39,11 @@ namespace final_project.Panels
             this.btnBackToGame.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnBackToGame.Location = new System.Drawing.Point(20, 20);
             this.btnBackToGame.Name = "btnBackToGame";
-            this.btnBackToGame.Size = new System.Drawing.Size(120, 30);
+            this.btnBackToGame.Size = new System.Drawing.Size(132, 30);
             this.btnBackToGame.TabIndex = 0;
             this.btnBackToGame.Text = "Back to Game";
             this.btnBackToGame.UseVisualStyleBackColor = false;
+            this.btnBackToGame.Click += new System.EventHandler(this.BtnBackToGame_Click);
             // 
             // picReference
             // 
@@ -70,28 +71,16 @@ namespace final_project.Panels
             this.tableLayoutPanelPuzzle.Size = new System.Drawing.Size(400, 400);
             this.tableLayoutPanelPuzzle.TabIndex = 2;
             // 
-            // btnShuffle
-            // 
-            this.btnShuffle.BackColor = System.Drawing.Color.LightYellow;
-            this.btnShuffle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShuffle.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnShuffle.Location = new System.Drawing.Point(20, 500);
-            this.btnShuffle.Name = "btnShuffle";
-            this.btnShuffle.Size = new System.Drawing.Size(100, 30);
-            this.btnShuffle.TabIndex = 3;
-            this.btnShuffle.Text = "Shuffle";
-            this.btnShuffle.UseVisualStyleBackColor = false;
-            // 
             // lblPuzzleTimer
             // 
             this.lblPuzzleTimer.AutoSize = true;
             this.lblPuzzleTimer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblPuzzleTimer.ForeColor = System.Drawing.Color.Black;
-            this.lblPuzzleTimer.Location = new System.Drawing.Point(140, 505);
+            this.lblPuzzleTimer.Location = new System.Drawing.Point(15, 502);
             this.lblPuzzleTimer.Name = "lblPuzzleTimer";
-            this.lblPuzzleTimer.Size = new System.Drawing.Size(112, 28);
+            this.lblPuzzleTimer.Size = new System.Drawing.Size(124, 28);
             this.lblPuzzleTimer.TabIndex = 4;
-            this.lblPuzzleTimer.Text = "Timer: 60s";
+            this.lblPuzzleTimer.Text = "Timer: 120s";
             // 
             // btnSavePuzzle
             // 
@@ -100,26 +89,33 @@ namespace final_project.Panels
             this.btnSavePuzzle.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnSavePuzzle.Location = new System.Drawing.Point(600, 500);
             this.btnSavePuzzle.Name = "btnSavePuzzle";
-            this.btnSavePuzzle.Size = new System.Drawing.Size(100, 30);
+            this.btnSavePuzzle.Size = new System.Drawing.Size(113, 30);
             this.btnSavePuzzle.TabIndex = 5;
             this.btnSavePuzzle.Text = "Save Puzzle";
             this.btnSavePuzzle.UseVisualStyleBackColor = false;
+            this.btnSavePuzzle.Click += new System.EventHandler(this.BtnSavePuzzle_Click);
+            // 
+            // puzzleTimer
+            // 
+            this.puzzleTimer.Enabled = true;
+            this.puzzleTimer.Interval = 1000;
             // 
             // PicturePuzzlePanel
             // 
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(782, 553);
             this.Controls.Add(this.btnBackToGame);
             this.Controls.Add(this.picReference);
             this.Controls.Add(this.tableLayoutPanelPuzzle);
-            this.Controls.Add(this.btnShuffle);
             this.Controls.Add(this.lblPuzzleTimer);
             this.Controls.Add(this.btnSavePuzzle);
             this.Name = "PicturePuzzlePanel";
-            this.Size = new System.Drawing.Size(800, 600);
             ((System.ComponentModel.ISupportInitialize)(this.picReference)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
+        private Timer puzzleTimer;
     }
 }

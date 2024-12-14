@@ -182,6 +182,7 @@ namespace final_project.Panels
             this.btnPicturePuzzle.TabIndex = 11;
             this.btnPicturePuzzle.Text = "Picture Puzzle";
             this.btnPicturePuzzle.UseVisualStyleBackColor = false;
+            this.btnPicturePuzzle.Click += new System.EventHandler(this.btnPicturePuzzle_Click);
             // 
             // BtnBackToMainMenu
             // 
@@ -198,6 +199,7 @@ namespace final_project.Panels
             // 
             // timer
             // 
+            this.timer.Enabled = true;
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 

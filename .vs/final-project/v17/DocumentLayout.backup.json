@@ -3,52 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|c:\\users\\favou\\school\\game programming\\final-project\\final-project\\utilities\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\utilities\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|c:\\users\\favou\\school\\game programming\\final-project\\final-project\\panels\\gameoverpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\panels\\gameoverpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|c:\\users\\favou\\school\\game programming\\final-project\\final-project\\panels\\gameoverpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\panels\\gameoverpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\panels\\gamepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\panels\\gamepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\panels\\gamepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\panels\\gamepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\panels\\gameoverpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\panels\\gameoverpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\panels\\picturepuzzlepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\panels\\picturepuzzlepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|c:\\users\\favou\\school\\game programming\\final-project\\final-project\\panels\\mainmenupanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\panels\\mainmenupanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\panels\\picturepuzzlepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\panels\\picturepuzzlepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\panels\\gamepanel.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\panels\\gamepanel.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\utilities\\prompt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\utilities\\prompt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\panels\\picturepuzzlepanel.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14B7279B-F2F2-4720-891D-914D537E6DD3}|final-project\\final-project.csproj|solutionrelative:final-project\\panels\\picturepuzzlepanel.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,72 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GamePanel.cs",
-              "DocumentMoniker": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\GamePanel.cs",
-              "RelativeDocumentMoniker": "final-project\\Panels\\GamePanel.cs",
-              "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\GamePanel.cs",
-              "RelativeToolTip": "final-project\\Panels\\GamePanel.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAowIsAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T03:35:25.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\MainForm.cs",
-              "RelativeDocumentMoniker": "final-project\\MainForm.cs",
-              "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\MainForm.cs",
-              "RelativeToolTip": "final-project\\MainForm.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAwEIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T03:59:12.298Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GamePanel.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\GamePanel.cs",
-              "RelativeDocumentMoniker": "final-project\\Panels\\GamePanel.cs",
-              "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\GamePanel.cs [Design]",
-              "RelativeToolTip": "final-project\\Panels\\GamePanel.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T04:39:10.295Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PicturePuzzlePanel.cs",
-              "DocumentMoniker": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\PicturePuzzlePanel.cs",
-              "RelativeDocumentMoniker": "final-project\\Panels\\PicturePuzzlePanel.cs",
-              "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\PicturePuzzlePanel.cs",
-              "RelativeToolTip": "final-project\\Panels\\PicturePuzzlePanel.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAACcAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T03:26:57.651Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Utilities\\GameManager.cs",
-              "RelativeDocumentMoniker": "final-project\\Utilities\\GameManager.cs",
-              "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Utilities\\GameManager.cs",
-              "RelativeToolTip": "final-project\\Utilities\\GameManager.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAIwCAAAABxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T20:37:36.839Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -132,86 +40,57 @@
               "RelativeDocumentMoniker": "final-project\\Panels\\GameOverPanel.cs",
               "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\GameOverPanel.cs",
               "RelativeToolTip": "final-project\\Panels\\GameOverPanel.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwBkAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T21:03:51.598Z",
+              "WhenOpened": "2024-12-11T04:48:43.469Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "GameOverPanel.cs [Design]",
               "DocumentMoniker": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\GameOverPanel.cs",
               "RelativeDocumentMoniker": "final-project\\Panels\\GameOverPanel.cs",
               "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\GameOverPanel.cs [Design]",
               "RelativeToolTip": "final-project\\Panels\\GameOverPanel.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T21:20:11.805Z",
+              "WhenOpened": "2024-12-11T04:48:39.676Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainMenuPanel.cs",
-              "DocumentMoniker": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\MainMenuPanel.cs",
-              "RelativeDocumentMoniker": "final-project\\Panels\\MainMenuPanel.cs",
-              "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\MainMenuPanel.cs",
-              "RelativeToolTip": "final-project\\Panels\\MainMenuPanel.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAgwCsAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "PicturePuzzlePanel.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\PicturePuzzlePanel.Designer.cs",
+              "RelativeDocumentMoniker": "final-project\\Panels\\PicturePuzzlePanel.Designer.cs",
+              "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\PicturePuzzlePanel.Designer.cs",
+              "RelativeToolTip": "final-project\\Panels\\PicturePuzzlePanel.Designer.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAuwEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T20:58:30.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T04:35:38.387Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GamePanel.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\GamePanel.Designer.cs",
-              "RelativeDocumentMoniker": "final-project\\Panels\\GamePanel.Designer.cs",
-              "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\GamePanel.Designer.cs",
-              "RelativeToolTip": "final-project\\Panels\\GamePanel.Designer.cs",
-              "ViewState": "AgIAALUAAAAAAAAAAAAewMQAAABiAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "PicturePuzzlePanel.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\PicturePuzzlePanel.cs",
+              "RelativeDocumentMoniker": "final-project\\Panels\\PicturePuzzlePanel.cs",
+              "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\PicturePuzzlePanel.cs [Design]",
+              "RelativeToolTip": "final-project\\Panels\\PicturePuzzlePanel.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T03:32:06.862Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T04:17:32.951Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\MainForm.cs",
-              "RelativeDocumentMoniker": "final-project\\MainForm.cs",
-              "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\MainForm.cs [Design]",
-              "RelativeToolTip": "final-project\\MainForm.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "PicturePuzzlePanel.cs",
+              "DocumentMoniker": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\PicturePuzzlePanel.cs",
+              "RelativeDocumentMoniker": "final-project\\Panels\\PicturePuzzlePanel.cs",
+              "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Panels\\PicturePuzzlePanel.cs",
+              "RelativeToolTip": "final-project\\Panels\\PicturePuzzlePanel.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwCoAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T04:34:03.751Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MainForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\MainForm.Designer.cs",
-              "RelativeDocumentMoniker": "final-project\\MainForm.Designer.cs",
-              "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\MainForm.Designer.cs",
-              "RelativeToolTip": "final-project\\MainForm.Designer.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA3wCAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T04:16:22.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Prompt.cs",
-              "DocumentMoniker": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Utilities\\Prompt.cs",
-              "RelativeDocumentMoniker": "final-project\\Utilities\\Prompt.cs",
-              "ToolTip": "C:\\Users\\favou\\SCHOOL\\Game Programming\\final-project\\final-project\\Utilities\\Prompt.cs",
-              "RelativeToolTip": "final-project\\Utilities\\Prompt.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAqwCAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T04:18:54.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T03:26:57.651Z"
             }
           ]
         }

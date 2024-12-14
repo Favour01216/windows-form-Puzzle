@@ -15,3 +15,4 @@ C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\fin
 C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final_project.Panels.GameOverPanel.resources
 C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final_project.Panels.GamePanel.resources
 C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final_project.Panels.PicturePuzzlePanel.resources
+C:\Users\favou\SCHOOL\Game Programming\final-project\final-project\obj\Debug\final_project.Properties.Resources.resources

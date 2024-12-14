@@ -16,18 +16,18 @@
           "AnomalyDescription": ""
         },
         {
-          "Question": "Who painted the Mona Lisa?",
-          "Answer": "Leonardo da Vinci",
-          "IsSolved": false,
-          "Narrative": "As you solve this puzzle, you notice the vibrant art of the era.",
-          "HasAnomaly": false,
-          "AnomalyDescription": ""
-        },
-        {
           "Question": "What invention greatly impacted navigation during the Renaissance?",
           "Answer": "Compass",
           "IsSolved": false,
           "Narrative": "The compass revolutionized exploration and trade.",
+          "HasAnomaly": false,
+          "AnomalyDescription": ""
+        },
+        {
+          "Question": "Who painted the Mona Lisa?",
+          "Answer": "Leonardo da Vinci",
+          "IsSolved": false,
+          "Narrative": "As you solve this puzzle, you notice the vibrant art of the era.",
           "HasAnomaly": false,
           "AnomalyDescription": ""
         }
